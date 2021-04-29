@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "test",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "test"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "test",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "logger": "0.0.1",
+    "morgan": "^1.10.0"
+  }
+}
