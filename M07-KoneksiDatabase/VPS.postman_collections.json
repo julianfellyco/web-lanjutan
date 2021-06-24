@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "da43a745-2672-4481-9357-bd2a0efe3c0d",
+		"name": "VPS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"tekniker1@simbio.com\",\n\t\"password\" : \"\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/auth/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AUTH Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"kelvin@simbio.id\",\n\t\"password\" : \"\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/auth/login-costumer",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"login-costumer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ORDER",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/orders",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DETAIL ORDER",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/order/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROGRESS",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/progress/1/3",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"progress",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ORDER when scan",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/progress-order/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"progress-order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FCM",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=AAAAoZK9UUU:APA91bFIVXNXYtQwOyMwsF81IkRz1saWOQC8vk9Qyd_022lnVHTUkgLJIY7V0IpUJdo1FbYRetMcPJ6BxbAppsdGLr_1a-nMkAl-uiiaikZuyjysJRt5cQcH_sTK8fLAF6kGQj8yI1T9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"to\" : \"fiG1UvUZiiM:APA91bFj4apdMlO6LLBPjie1mLMGmraej3RsH9uL69JGw7trYKsgP8NL2qCZYCMPcqyqEZkd3yTMoplSjkZaK0h10zGlyosTCYpdePKf5W1Y00_fStRGpslRFg_RgiVSv3HSgR-kZ1hS\",\n\t\"notification\" : {\n\t\t\"body\" : \"Hallo Andri!\",\n\t\t\"title\" : \"Order dengan ID Harus Selesai Selasa !!\",\n\t\t\"content_available\" : true,\n\t\t\"priority\" : \"high\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Progress id",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_order\" : 1,\n\t\"id_product\" : 4,\n\t\"id_progress\" : 8,\n\t\"status\" : 0,\n\t\"tanggal_selesai\" : \"20111218131717\",\n\t\"id_tekniker\" : 2\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/update-progress/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"update-progress",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/tekniker/quality-control/",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_order\" : 1,\n    \"id_product\" : 1,\n    \"margin\" : 1,\n    \"oklusi\" : 1,\n    \"anatomi\" : 1,\n    \"warna\" : 1,\n    \"pic\" : 1,\n    \"tanggal\" : \"20111218131717\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/quality-control/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"quality-control",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/tekniker/updatefcm",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 4,\n\t\"token\" : \"fY-cxvAifcg:APA91bGVS3vQMXPPzBy3zt49ZaiYQewemmvZd5Xv8ejjdQaN9quvzrotshCBFozPGaHJsc9xRJ3hZlxBmhC8VfFL9FSKKK3Sfp5AqjDhlgJyEUIoJiPskQkuRTbrsGFVkv-pKOK8CAfW\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/updatefcm",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"updatefcm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/tekniker/teknikerinorder/1",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/teknikerinorder/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"teknikerinorder",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/tekniker/orders-riwayat",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/orders-riwayat",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"orders-riwayat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/auth/otp",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"otp\" : \"081901\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/auth/otp",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/tekniker/cek-quality/1/3",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/cek-quality/1/3",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"cek-quality",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/tekniker/update-produk-selesai/",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_order\" : 1,\n\t\"id_product\" : 3\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/tekniker/update-produk-selesai/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tekniker",
+						"update-produk-selesai",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
