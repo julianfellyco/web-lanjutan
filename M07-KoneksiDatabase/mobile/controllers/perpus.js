@@ -5,7 +5,7 @@ exports.cariBuku = (req, res, next) => {
 
   let query = "select * from tbl_buku where id = ?";
 
-  connMhs.query(query, [id], (err, rows) => {
+  conn.query(query, [id], (err, rows) => {
     if (err) {
       return res.status(400).send({
         message: "Failed when query data",
