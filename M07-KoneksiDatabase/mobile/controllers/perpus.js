@@ -50,7 +50,7 @@ exports.tambahBuku = (req, res, next) => {
 };
 
 exports.updateBuku = (req, res) => {
-  var id = req.params.id;
+  var id = req.body.id;
   let nama = req.body.nama;
   let deskripsi = req.body.deskripsi;
   let harga = req.body.harga;

@@ -7,6 +7,6 @@ const teknikerCtrl = require("../controllers/perpus");
 router.get("/buku/:id", teknikerCtrl.cariBuku);
 router.post("/buku/", checkAuth, teknikerCtrl.tambahBuku);
 router.put("/buku/", checkAuth, teknikerCtrl.updateBuku);
-//router.delete("/buku/:id", checkAuth, teknikerCtrl.hapusBuku);
+router.delete("/buku/:id", checkAuth, teknikerCtrl.hapusBuku);
 
 module.exports = router;
